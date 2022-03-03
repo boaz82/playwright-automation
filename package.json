@@ -1,0 +1,21 @@
+{
+  "name": "playwright-automation-project",
+  "version": "1.0.0",
+  "description": "Qualitest automation project",
+  "main": "index.js",
+  "scripts": {
+    "tests:chrome": "playwright test --config=playwright.config.ts --project=Chromium",
+    "tests:firefox": "playwright test --config=playwright.config.ts --project=Firefox",
+    "tests:webkit": "playwright test --config=playwright.config.ts --project=Webkit --retries=3",
+    "tests:visual:chrome": "playwright test --config=playwright.config.ts --project=Chromium --headed",
+    "tests:visual:firefox": "playwright test --config=playwright.config.ts --project=Firefox --headed",
+    "tests:visual:webkit": "playwright test --config=playwright.config.ts --project=Webkit --headed",
+    "tests:api": "playwright test --config=api.config.ts --project=Chromium"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@playwright/test": "^1.19.1",
+    "prettier": "^2.5.1"
+  }
+}

@@ -1,0 +1,46 @@
+<testsuites id="" name="" tests="5" failures="1" skipped="0" errors="0" time="24.516">
+<testsuite name="e2e-login.spec.ts" timestamp="1645618530388" hostname="" tests="5" failures="1" skipped="0" time="37.199" errors="0">
+<testcase name="Login page tests Check page redirect to the required url" classname="[Chromium] › e2e-login.spec.ts:14:5 › Login page tests › Check page redirect to the required url" time="9.348">
+</testcase>
+<testcase name="Login page tests Check page title" classname="[Chromium] › e2e-login.spec.ts:18:5 › Login page tests › Check page title" time="9.304">
+</testcase>
+<testcase name="Login page tests Check page subtitle text" classname="[Chromium] › e2e-login.spec.ts:22:5 › Login page tests › Check page subtitle text" time="3.83">
+</testcase>
+<testcase name="Login page tests Check validation error message when click on login without enter values @validationError" classname="[Chromium] › e2e-login.spec.ts:26:5 › Login page tests › Check validation error message when click on login without enter values @validationError" time="4.442">
+</testcase>
+<testcase name="Login page tests Check validation error message when fill in wrong username and password @validationError" classname="[Chromium] › e2e-login.spec.ts:31:5 › Login page tests › Check validation error message when fill in wrong username and password @validationError" time="10.275">
+<failure message="e2e-login.spec.ts:31:5 Check validation error message when fill in wrong username and password @validationError" type="FAILURE">
+  [Chromium] › e2e-login.spec.ts:31:5 › Login page tests › Check validation error message when fill in wrong username and password @validationError 
+
+    Error: expect(received).toContainText(expected)
+
+    Expected string: "The username and password could not be verified."
+    Received string: ""
+    Call log:
+      - expect.toContainText with timeout 5000ms
+      - waiting for selector ".error"
+
+
+      32 |         await loginPage.fillUsernamePassword('invalid username', 'invalid password')
+      33 |         await loginPage.clickLogin()
+    > 34 |         await loginPage.assertErrorMessage('The username and password could not be verified.')
+         |                         ^
+      35 |     })
+      36 | })
+
+        at LoginPage.assertErrorMessage (/Users/boazcohen/Documents/udemy-playwright/playwright-automation-project/page-objects/LoginPage.ts:32:41)
+        at /Users/boazcohen/Documents/udemy-playwright/playwright-automation-project/tests/e2e/e2e-login.spec.ts:34:25
+
+    attachment #1: screenshot (image/png) ----------------------------------------------------------
+    test-results/e2e-login-Login-page-tests-Check-validation-error-messag-c6582-in-wrong-username-and-password-validationError-Chromium/test-failed-1.png
+    ------------------------------------------------------------------------------------------------
+
+</failure>
+<system-out>
+
+[[ATTACHMENT|../../test-results/e2e-login-Login-page-tests-Check-validation-error-messag-c6582-in-wrong-username-and-password-validationError-Chromium/test-failed-1.png]]
+
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
